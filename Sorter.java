@@ -17,7 +17,7 @@ public class Sorter {
 		
 	}
 	
-	// Hello World!
+	// Hello COSC 499!
 	public static String[] sort(String[] list) {
 	
 		
