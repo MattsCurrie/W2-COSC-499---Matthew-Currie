@@ -1,33 +1,35 @@
+import java.util.Scanner;
+
 public class Sorter {
 	public static void main (String[] args) {
-		String[] names = {
-				"Michael",
-				"Terry",
-				"Serina",
-				"Olson",
-				"Norwell"
-		};
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter 5 Names or 5 Numbers");
 		
-		names = sort_names(names);
-		for(int i = 0; i < names.length; i++) {
-			System.out.println(names[i]);
+		String[] list = new String[5];
+		for(int i = 0; i < 5; i++) {
+			list[i] = sc.nextLine();
+		}
+		
+		list = sort(list);
+		for(int i = 0; i < list.length; i++) {
+			System.out.println(list[i]);
 		}
 		
 	}
 	
-	public static String[] sort_names(String[] names) {
+	public static String[] sort(String[] list) {
 	
 		
-		for(int i = 0; i < names.length; i++) {
-			for(int j = i + 1; j < names.length; j++) {
-				if(names[i].toLowerCase().charAt(0) > names[j].toLowerCase().charAt(0)) {
-					String t_name = names[i];
-					names[i] = names[j];
-					names[j] = t_name;
+		for(int i = 0; i < list.length; i++) {
+			for(int j = i + 1; j < list.length; j++) {
+				if(list[i].toLowerCase().charAt(0) > list[j].toLowerCase().charAt(0)) {
+					String temp_item = list[i];
+					list[i] = list[j];
+					list[j] = temp_item;
 				}
 			}
 		}
 		
-		return names;
+		return list;
 	}
 }
