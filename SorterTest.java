@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 class SorterTest {
 
 	@Test
-	void test() {
+	void test_feature1() {
 		String[] names = {
 				"John",
 				"Abigail",
@@ -14,7 +14,7 @@ class SorterTest {
 				"Zee"
 		};
 		
-		String[] actual = Sorter.sort_names(names);
+		String[] actual = Sorter.sort(names);
 		
 		String[] expected = {
 			"Abigail",
@@ -22,6 +22,31 @@ class SorterTest {
 			"Roy",
 			"Yon",
 			"Zee"
+		};
+		
+		for(int i = 0; i < actual.length; i++) {
+			assertEquals(actual[i], expected[i]);
+		}
+	}
+	
+	@Test
+	void test_feature2() {
+		String[] string_numbers = {
+				"3",
+				"2",
+				"1",
+				"7",
+				"9"
+		};
+		
+		String[] actual = Sorter.sort(string_numbers);
+		
+		String[] expected = {
+			"1",
+			"2",
+			"3",
+			"7",
+			"9"
 		};
 		
 		for(int i = 0; i < actual.length; i++) {
