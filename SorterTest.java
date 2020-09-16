@@ -4,9 +4,10 @@ import org.junit.jupiter.api.Test;
 
 class SorterTest {
 
+	// FEATURE ONE TEST
 	@Test
 	void test_feature1() {
-		String[] names = {
+		String[] inputs = {
 				"John",
 				"Abigail",
 				"Roy",
@@ -14,7 +15,7 @@ class SorterTest {
 				"Zee"
 		};
 		
-		String[] actual = Sorter.sort(names);
+		String[] actual = Sorter.sort(inputs);
 		
 		String[] expected = {
 			"Abigail",
@@ -29,9 +30,10 @@ class SorterTest {
 		}
 	}
 	
+	// FEATURE TWO TEST
 	@Test
 	void test_feature2() {
-		String[] string_numbers = {
+		String[] inputs = {
 				"3",
 				"2",
 				"1",
@@ -39,7 +41,7 @@ class SorterTest {
 				"9"
 		};
 		
-		String[] actual = Sorter.sort(string_numbers);
+		String[] actual = Sorter.sort(inputs);
 		
 		String[] expected = {
 			"1",
