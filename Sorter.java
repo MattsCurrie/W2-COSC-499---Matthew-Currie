@@ -17,7 +17,7 @@ public class Sorter {
 		
 	}
 	
-	// example push
+	// example push 2
 	public static String[] sort(String[] list) {
 	
 		
